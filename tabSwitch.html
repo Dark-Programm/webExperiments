@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title>Tab Switcher</title>
+	<style type="text/css">
+	.cont{
+		width:fit-content;
+		height:30px;
+		background-color:#fff;
+		border:2px solid blue;
+		border-radius:20px;
+		margin:auto;
+		margin-top:200px;
+		left:0;
+		right:0;
+		display:block;
+		overflow:hidden;
+	}
+	.low,.high,.mid
+	{
+		position:fix;
+		width:60px;
+		height:31px;
+		cursor: pointer;
+		user-select:none;
+		color:blue;
+		line-height:1.82;
+		float:left;
+		text-align:center;
+		display:block;
+	}
+	.low:hover,.mid:hover,.high:hover{
+		line-height:2.0;
+		background-color:#eee;
+	}
+	.low{
+		border-right:1px solid blue;
+	}
+	.mid{
+		border-right:1px solid blue;
+		border-left:1px solid blue;
+	}
+	.high{
+		border-left:1px solid blue;
+	}
+	</style>
+</head>
+<body>
+	<div class="cont">
+		<div class="low" id="k1" onclick="on1()">Low</div>
+		<div class="mid" id="k2" onclick="on2()">Mid</div>
+		<div class="high" id="k3" onclick="on3()">High</div>
+	</div>
+	<script>
+	var x,y,z
+	function init()
+	{
+		x=document.getElementById("k1");
+		y=document.getElementById("k2");
+		z=document.getElementById("k3");
+	}
+	function on1()
+	{
+		init();
+
+		x.style.backgroundColor='blue';
+		x.style.color='white';
+
+		y.style.backgroundColor='white';
+		y.style.color='blue';
+
+		z.style.backgroundColor='white';
+		z.style.color='blue';
+	}
+	function on2()
+	{
+		init();
+
+		y.style.backgroundColor='blue';
+		y.style.color='white';
+
+		x.style.backgroundColor='white';
+		x.style.color='blue';
+
+		z.style.backgroundColor='white';
+		z.style.color='blue';
+	}
+	function on3()
+	{
+		init();
+
+		z.style.backgroundColor='blue';
+		z.style.color='white';
+
+		y.style.backgroundColor='white';
+		y.style.color='blue';
+
+		x.style.backgroundColor='white';
+		x.style.color='blue';
+	}
+	</script>
+</body>
+</html>
